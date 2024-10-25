@@ -1,12 +1,8 @@
 <!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Dimension by HTML5 UP</title>
+		<title>Peter Egbikuadje</title>
+		<link rel="icon" type="logo.jpeg" href="images/logo.jpeg">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -24,17 +20,24 @@
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Peter Egbiks</h1>
-								<p>An exotic dancer turned engineer.</p>
+								<h1>Peter Egbikuadje</h1>
+								<p>As a dedicated and ambitious future electrical engineer, I am eager to thrive and contribute to a collaborative, 
+									dynamic work environment where creativity, teamwork, and innovation are highly valued. While I possess 
+									skills across a variety of disciplines, I have chosen to focus my expertise on digital design, particularly 
+									in FPGA development, without limiting my potential for growth in other areas.
+								</p>
+								<p> If you want only FPGA relevant experience/projects, you can activate that by clicking the button below.
+								</p>
+								<button id="fpgamode"type="button">FPGA Mode: Disabled</button>
 							</div>
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">Intro</a></li>
+								<li><a href="#education">Education</a></li>
 								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
+								<li><a href="#project">Projects</a></li>
+								<li><a href="#about">About Me</a></li>
 								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
 					</header>
@@ -43,44 +46,621 @@
 					<div id="main">
 
 						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+							<article id="education">
+								<h2 class="major">Education</h2>
+								<h3>School: Carleton University</h3>
+								<h3>Duration: September 2019 to July 2024</h3>
+								<h3>Program: Bachelor of Engineering - Electrical Engineering</h3>
+								<h3>Achievenments</h3>
+								<ul>
+									<li>Graduated with High Distinction - 11/12 GPA (92%)</li>
+									<li>Deans' Honors List for all 4 study years (2020, 2021, 2022, 2024)</li>
+									<li>Murdoch Maxwell MacOdrum Scholarship (2020)</li>
+									<li>David A. Golden Scholarship (2021)</li>
+									<li>E.W.R. Steacie Scholarship (2022)</li>
+								</ul>
 							</article>
 
 						<!-- Work -->
 							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+								<h2 class="major">Work Experience</h2>
+								<p>Here are the companies I've had the privilege of working with. Hover over each company to get a glance at my role, and click for more details.</p>
+								<nav class="nav-item">
+									<ul>
+										<li><a href="#fidus">Fidus Incorporation</a></li>
+										<li><a href="#carleton">Carleton University</a></li>
+									</ul>
+								</nav>
+								<nav class="nav-item notfpga">
+									<ul>
+										<li><a href="#rogers">Rogers Communications</a></li>
+										<li><a href="#cineplex">Cineplex Cinemas</a></li>
+									</ul>
+								</nav>
+								<nav class="nav-item notfpga">
+									<ul>
+										<li><a href="#pwb">PWB Interconnect Solutions</a></li>
+									</ul>
+								</nav>
+							</article>
+						
+						<!-- Work Experience List --> 
+						<article id="fidus" class="inner">
+							<h2 class="major">Fidus Incorporation</h2>
+							<h3 class="role"> Role: Junior FPGA Engineer (Hybrid)</h3>
+							<h3> Duration: September 2022 to May 2023</h3>
+							<h3>Experience</h3>
+							<ul>
+								<li>Developed bash scripts to set up the environment and invoke Xilinx Vivado tools, and designed tcl scripts to automate the entire project design flow from synthesis to bitstream generation.</li>
+								<li>Debugged VHDL project files provided by clients by designing test bench modules and automating test simulations using tcl scripts using the software application, Questasim.</li>
+								<li>Developed Python scripts to automate modification of XML tags and structures, enabling FPGA configuration for variations of applications.</li>
+								<li>Participated in a collaborative effort within a large, diverse team to add and improve the functionality of a client’s product.</li>
+								<li>Leveraged Linux terminal commands in a Linux based environment for environment navigation, file management, and compiling/running code.</li>
+								<li>Utilized Git for version control, including branch management, merging, and conflict resolution. Integrated CI/CD practices to enable effective team collaboration and ensure consistent code quality.</li>
+								<li>Utilized Jira to manage projects, track issues and bugs, and streamline task assignment through custom workflows.</li>
+								<li>Used Confluence for developing and reviewing comprehensive project documentation, including meeting notes, design specifications, and team collaboration pages.</li>
+							</ul>
+							<h3>Key Challenge</h3>
+							<p>I faced difficulties in debugging complex FPGA designs and ensuring that they functioned correctly across various test scenarios. </p>
+							<h3>Solution</h3>
+							<p>I addressed this by researching and learning simulation tools like Questasim to create detailed testbenches, simulating different edge cases to verify the design's behavior.</p>
+							<h3>Tools and Softwares Used</h3>
+							<p>Xilinx Vivado, Questasim, Bitbucket, Jira, Confluence, Git, Python, Verilog/VHDL, TCL, Bash, XML, and Linux Environment.</p>
+						</article>
+
+						<article id="pwb" class="inner">
+							<h2 class="major">PWB Interconnect Solutions</h2>
+							<h3 class="role"> Role: Engineering Intern (In-person)</h3>
+							<h3> Duration: May 2020 to August 2020</h3>
+							<h3>Experience</h3>
+							<ul>
+								<li>Developed documentation, user guides, and training manuals to support development of a large hardware and software product.</li>
+								<li>Programmed embedded microcontrollers to automate testing of integrated hardware and software systems.</li>
+								<li>Created user interfaces to meet client requirements and engineering specifications, which were deployed directly to clients.</li>
+								<li>Performed data analysis in Excel to analyze hardware test data.</li>
+							</ul>
+							<h3>Key Challenge</h3>
+							<p></p>
+							<h3>Solution</h3>
+							<p></p>
+							<h3>Tools and Softwares Used</h3>
+							<p></p>
+						</article>
+
+						<article id="carleton" class="inner">
+							<h2 class="major">Carleton University</h2>
+							<h3 class="role"> Role: Teaching Assistant (Calculus/Linear Algebra - In-person)</h3>
+							<h3> Duration: September 2023 to May 2024</h3>
+							<h3>Experience</h3>
+							<ul>
+								<li>Worked closely with the professor to help set up the classroom, distribute materials, and ensure a conducive learning environment while also making necessary accommodations for PMC students.</li>
+								<li>With the guidance of the instructor graded tutorial problems and test papers while providing constructive feedback to students to help them improve their understanding of the subject.</li>
+								<li>Offered one-on-one support through office hours with additional explanations, guiding through problem-solving steps, and helping to clarify misconceptions.</li>
+								<li>During exams, I helped ensure a fair and organized testing environment which involves distributing and collecting exam materials, monitoring students, and addressing any issues that may arise.</li>
+								<li>Facilitated student learning by teaching and presenting solutions to problems assigned by the professor during tutorials, ensuring clarity and comprehension while encouraging active participation and discussion among students.</li>
+								<li>Assisted the professor by providing ongoing feedback on course content for continuous improvement.</li>
+								<li>Created supplementary problems designed to enhance student understanding by addressing a variety of key concepts.</li>
+								<li>Sent email reminders to students about important deadlines for assignments, tutorial materials, and upcoming tests.</li>
+							</ul>
+							<h3>Key Challenge</h3>
+							<p>I encountered an imbalance in understanding among students, where some grasped new concepts easily while others struggled to keep up with the material. </p>
+							<h3>Solution</h3>
+							<p>I held additional office hours and extended my availability after class to provide personalized assistance to students needing extra support, ensuring they fully understood the concepts being taught. Additionally, I modified my future teaching methods to break down complex concepts into more understandable material.</p>
+							<h3>Achievement</h3>
+							<p>I achieved Teaching and Learning Services Outstanding TA Award Nomination for the year 2023/2024.</p>
+						</article>
+
+						<article id="rogers" class="inner">
+							<h2 class="major">Rogers Communications</h2>
+							<h3 class="role"> Role: Technical Support Specialist (Remote)</h3>
+							<h3> Duration: May 2022 to September 2024</h3>
+							<h3>Experience</h3>
+							<ul>
+								<li>Maintained solid customer relationships by handling questions and concerns with speed and professionalism.</li>
+								<li>Maintained accurate and detailed records of customer interactions, transactions, and complaints in the customer’s account database.</li>
+								<li>Assisted customers with troubleshooting technical issues related to internet connectivity, phone lines, and equipment malfunctions.</li>
+								<li>Participated in ongoing training and development programs to enhance customer service skills and performance.</li>
+								<li>Ensured compliance with company policies, regulations, and data privacy laws to protect customer information.</li>
+								<li>Conducted follow-up communications to ensure customer issues were resolved satisfactorily and gathered feedback on service experiences.</li>
+								<li>Assisted customers with billing issues, explaining charges and helping them understand billing cycles and payment options.</li>
+								<li>Constantly updated customers on new promotions and offers requirements.</li>
+							</ul>
+							<h3>Key Challenge</h3>
+							<p>I faced challenges in diagnosing hardware issues remotely, which often led to prolonged resolution times and customer frustration due to limited visibility into their systems.</p>
+							<h3>Solution</h3>
+							<p>I developed a structured troubleshooting guide outlining common hardware issues and their solutions, which I used to assist customers to in quicker problem diagnosis. Additionally, I provided clear instructions for capturing diagnostic information, ensuring I had the necessary data to expedite the troubleshooting process.</p>
+						</article>
+
+						<article id="cineplex" class="inner">
+							<h2 class="major">Cineplex Cinemas</h2>
+							<h3 class="role"> Role: Host and Server (In-Person)</h3>
+							<h3> Duration: July 2021 to August 2022</h3>
+							<h3>Experience (Host)</h3>
+							<ul>
+								<li>Greeted and warmly welcomed guests upon arrival, ensuring a positive first impression.</li>
+								<li>Managed reservations, seating arrangements, and waitlists efficiently to maximize seating capacity.</li>
+								<li>Effectively communicated with servers and kitchen staff to maintain smooth operations and minimize wait times.</li>
+								<li>Assisted in coordinating private events and large party reservations, ensuring seamless execution.</li>
+								<li>Responded to phone inquiries, providing accurate information about the restaurant and its offerings.</li>
+								<li>Collaborated with management to develop and implement strategies for enhancing the guest experience.</li>
+							</ul>
+							<h3>Experience (Server)</h3>
+							<ul>
+								<li>Provided outstanding customer service to a diverse clientele, ensuring an exceptional dining experience.</li>
+								<li>Demonstrated thorough knowledge of menu items, ingredients, and specials to make knowledgeable recommendations and answer customer inquiries.</li>
+								<li>Effectively handled a high volume of orders, ensuring accuracy and timeliness.</li>
+								<li>Collaborated with the kitchen staff to ensure prompt and accurate delivery of orders.</li>
+								<li>Resolved guest concerns and complaints in a professional and timely manner, striving for complete satisfaction.</li>
+								<li>Maintained cleanliness and organization of the dining area, including table setup, silverware polishing, and overall ambiance.</li>
+							</ul>
+							<h3>Key Challenge</h3>
+							<p>I faced difficulties in balancing the need for exceptional customer service with the demand for quick service during peak hours, which often resulted in rushed interactions and customer dissatisfaction.</p>
+							<h3>Solution</h3>
+							<p>I developed my multitasking skills by implementing active listening techniques while engaging with customers, allowing me to maintain eye contact and respond to their inquiries while efficiently noting orders. Additionally, I practiced summarizing orders back to customers to confirm accuracy, ensuring that they felt heard and valued while minimizing errors and enhancing overall service efficiency.</p>
+						</article>
+							
+						<!-- Projects -->
+							<article id="project">
+								<h2 class="major">Projects</h2>
+								<p>Here are some of the projects I've worked on. Hover over each project to get a glance at my role, and click for more details.</p>
+								<nav class="nav-item">
+									<ul>
+										<li><a href="#pacman">Pacman Game</a></li>
+										<li><a href="#bouncedvd">Bouncing DVD Replica</a></li>
+									</ul>
+								</nav>
+								<nav class="nav-item">
+									<ul>
+										<li><a href="#eggtimer">Egg Timer</a></li>
+										<li><a href="#snakeladder">Snake & Ladder Game</a></li>
+									</ul>
+								</nav>
+								<nav class="nav-item notfpga">
+									<ul>
+										<li><a href="#bookstore">Bookstore GUI</a></li>
+										<li><a href="#syscx">X Social Media Replica</a></li>
+									</ul>
+								</nav>
+								<nav class="nav-item notfpga">
+									<ul>
+										<li><a href="#doorlock">Fingerprint Doorlock</a></li>
+									</ul>
+								</nav>
+								<nav class="nav-item notfpga">
+									<ul>
+										<li><a href="#ai">Emotion Image Classification</a></li>
+									</ul>
+								</nav>
+								<nav class="nav-item notfpga">
+									<ul>
+										<li><a href="#robotarm">Robot-aided Bullet Retrieval</a></li>
+									</ul>
+								</nav>
+								<nav class="nav-item notfpga">
+									<ul>
+										<li><a href="#covidscan">Covid-19 Automated Scanner</a></li>
+									</ul>
+								</nav>
+								<nav class="nav-item notfpga">
+									<ul>
+										<li><a href="#resume">Digital Portfolio</a></li>
+									</ul>
+								</nav>
 							</article>
 
-						<!-- About -->
+							<!-- Project List --> 
+
+							<article id="pacman" class="inner">
+								<h2 class="major">Pacman Spiking Neural Network</h2>
+								<h3 class="role"> Role: FPGA Designer</h3>
+								<h3> Project type: School</h3>
+								<h3> Duration: September 2023 to April 2024</h3>
+								<h3>Description</h3>
+								<p>Collaborated with a team to design and implement a Spiking Neural Network (SNN) on an FPGA, utilizing its parallel processing capabilities to control a Pacman game on a computer. 
+									The project involved translating biological neural network behaviors into an efficient hardware architecture, resulting in real-time game control. This demonstrated 
+									a deep understanding of digital design, neural computation, and FPGA-based system optimization.</p>
+								<h3>Responsibilities</h3>
+								<ul>
+									<li>Translated a MATLAB-designed Spiking Neural Network (SNN) into FPGA-compatible code (Verilog).</li>
+									<li>Developed a USB-UART interface on Xilinx Vivado to establish communication between the PC and FPGA.</li>
+									<li>Thoroughly tested and debugged USB-UART interface project files by designing test benches aimed at validating their individual functionalities.</li>
+									<li>Created a Python script using PySerial to automate serial data transmission of the Pacman game between the PC and FPGA.</li>
+									<li>Ensured seamless real-time communication between the FPGA and PC for gameplay and data processing.</li>
+									<li>Created a comprehensive report on the design process.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p>I encountered timing issues during data transmission between the PC and FPGA, causing delays and inconsistent communication during the Pacman game.</p>
+								<h3>Solution</h3>
+								<p>Implemented timing synchronization mechanisms within the USB-UART protocol and optimized the Python script to manage data flow more efficiently. This ensured stable, 
+									real-time communication, eliminating transmission bottlenecks and maintaining consistent gameplay.</p>
+								<h3>Tools and Softwares Used</h3>
+								<p>Vivado Xilinx, Python, Matlab, FPGA Board (Nexys 4DDR), and Verilog </p>
+							</article>
+
+							<article id="bouncedvd" class="inner">
+								<h2 class="major">Bouncing DVD Replica</h2>
+								<h3 class="role"> Role: FPGA Designer</h3>
+								<h3> Project type: Personal</h3>
+								<h3> Duration: May 2023 to July 2023</h3>
+								<h3>Description</h3>
+								<p>I developed a variation of the classic bouncing DVD logo using a FPGA board with a VGA connection to a monitor. The project involved simulating a similar concept to the iconic DVD logo's movement 
+									across the screen, bouncing off edges while maintaining accurate timing and pixel positioning. Through this project, I gained deeper insights into digital design, 
+									VGA signal generation, and the use of FPGA for hardware-based graphical interfaces. I also enhanced my understanding of synchronization between hardware and display 
+									interfaces, along with hands-on experience debugging timing issues and managing FPGA resources efficiently.</p>
+								<h3>Responsibilities</h3>
+								<ul>
+									<li>Designed and implemented the FPGA logic to simulate a bouncing box effect.</li>
+									<li>Developed a VGA signal generation module to interface the FPGA with a standard monitor.</li>
+									<li>Optimized the animation performance, ensuring smooth transitions and consistent timing.</li>
+									<li>Tested and debugged the FPGA design to ensure compatibility with VGA monitors.</li>
+									<li>Verified the timing and synchronization of VGA signals by perfoming timing analysis for stable video output.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p>I encountered issues where the logo sometimes overlapped with the screen’s borders.</p>
+								<h3>Solution</h3>
+								<p>I refined the edge-detection algorithm by adjusting the coordinate calculations and using precise pixel boundaries to prevent overlaps</p>
+								<h3>Tools and Softwares Used</h3>
+								<p>Xilinx Vivado, Verilog, and FPGA Board (Nexys 4DDR)</p>
+								<h3>Demo</h3>
+								<video class="center-vid" controls>
+									<source src="videos/BounceDVD.mp4" type="video/mp4">
+								  Your browser does not support the video tag.
+								</video>
+							</article>
+
+							<article id="eggtimer" class="inner">
+								<h2 class="major">Egg Timer System</h2>
+								<h3 class="role"> Role: FPGA Designer</h3>
+								<h3> Project type: School</h3>
+								<h3> Duration: November 2021 to December 2021</h3>
+								<h3>Description</h3>
+								<p>I designed and implemented an egg timer system on a Nexys4 DDR FPGA board, programmed using Xilinx Vivado. 	This helped deepen my 
+									understanding of hardware-based control systems, user interfaces, and FPGA programming.</p>
+								<h3>Responsibilities</h3>
+								<ul>
+									<li>Developed an egg timer system using Verilog on the Nexys4 DDR FPGA board.</li>
+									<li>Designed and implemented button-based control logic for starting, stopping, and resetting the timer.</li>
+									<li>Programmed a 7-segment display on the FPGA board to visually show the countdown.</li>
+									<li>Integrated LED indicators for status updates based on the timer's state.</li>
+									<li>Tested and debugged the FPGA design to ensure correct functionality.</li>
+									<li>Added an auditory alert mechanism for signaling the completion of the timer.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p>I encountered issues where the timer buttons occasionally registered multiple unintended presses or failed to detect input reliably, 
+									causing inaccuracies in timer operation (e.g., skipping increments or failing to stop/start).
+								<h3>Solution</h3>
+								<p>I Implemented a hardware debouncing technique for the buttons to filter out noise and ensure each button press was 
+									accurately detected, resulting in a stable and reliable user interface for controlling the timer.</p>
+								<h3>Tools and Softwares Used</h3>
+								<p>Xilinx Vivado, Verilog, and FPGA Board (Nexys 4DDR)</p>
+								<h3>Demo</h3>
+								<video class="center-vid" controls>
+									<source src="videos/Eggtimer.mp4" type="video/mp4">
+								  Your browser does not support the video tag.
+								</video>
+							</article>
+
+							<article id="bookstore" class="inner">
+								<h2 class="major">Bookstore Graphical User Interface</h2>
+								<h3 class="role"> Role: Software Developer</h3>
+								<h3> Project type: School</h3>
+								<h3> Duration: February 2021 to April 2021</h3>
+								<h3>Description</h3>
+								<p>Developed a bookstore management system using Java, focused on deepening understanding of Object-Oriented Programming (OOP) principles. The project involved designing 
+									an intuitive graphical user interface (GUI) for managing various bookstore operations, including inventory management, customer orders, and book details, while 
+									ensuring adherence to OOP concepts such as encapsulation, inheritance, polymorphism, and abstraction.</p>
+								<h3>Responsibilities</h3>
+								<ul>
+									<li>Designed and implemented the graphical user interface (GUI) using Java's Swing framework.</li>
+									<li>Applied OOP principles to organize the system's architecture, ensuring seperability and reusability.</li>
+									<li>Developed features for adding, updating, and deleting book records from inventory.</li>
+									<li>Integrated functionality for managing customer orders and tracking inventory levels.</li>
+									<li>Debugged and optimized the application for smoother user experience.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p></p>
+								<h3>Solution</h3>
+								<p></p>
+								<h3>Tools and Softwares Used</h3>
+								<p>IntelliJ IDEA and Java</p>
+								<h3>Demo</h3>
+								<video class="center-vid" controls>
+									<source src="videos/Bookstore.mp4" type="video/mp4">
+								  Your browser does not support the video tag.
+								</video>
+
+							</article>
+
+							<article id="syscx" class="inner">
+								<h2 class="major">X Social Media Webpage Replica</h2>
+								<h3 class="role"> Role: Web Designer</h3>
+								<h3> Project type: School</h3>
+								<h3> Duration: February 2024 to April 2024</h3>
+								<h3>Description</h3>
+								<p>The objective of the project was to design a website with the x social media web page concept using HTML, CSS, JavaScript, MySQL, and PHP to enhance my front-end and back-end web development skills. Through this project, I gained a deeper 
+									understanding of responsive design, client-server interactions, and user experience (UX) optimization.</p>
+								<h3>Role</h3>
+								<ul>
+									<li>Developed the structure and layout of the web page using HTML and CSS to ensure a visually appealing and responsive design.</li>
+									<li>Integrated JavaScript for interactivity and form validation.</li>
+									<li>Set up a server-side connection using PHP for handling form submissions, data processing, and user authentication.</li>
+									<li>Stored user data and application content in a MySQL database, ensuring efficient data retrieval and management.</li>
+									<li>Set up a password section where user passwords were encrypted before being stored in the database, enhancing security.</li>
+									<li>Developed and implemented unit testing for the web page using Selenium to ensure functionality, improve reliability, and identify bugs during the development process.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p>I encountered issues where the server-side form handling with PHP was prone to security vulnerabilities, including SQL injection.</p>
+								<h3>Solution</h3>
+								<p>I implemented input sanitization and prepared statements in PHP to securely process user data, preventing security breaches.</p>
+								<h3>Tools and Softwares Used</h3>
+								<p>JavaScript, PHP, HTML, MySQL, and CSS</p>
+								<h3>Demo</h3>
+								<video class="center-vid" controls>
+									<source src="videos/Social Website.mp4" type="video/mp4">
+								  Your browser does not support the video tag.
+								</video>
+							</article>
+
+							<article id="doorlock" class="inner">
+								<h2 class="major">Fingerprint Doorlock System</h2>
+								<h3 class="role"> Role: Hardware Designer</h3>
+								<h3> Project type: Personal</h3>
+								<h3> Duration: May 2021 to August 2021</h3>
+								<h3>Description</h3>
+								<p> The objective of this project was to develop a fingerprint doorlock which is unlocked using fingerprint biometrics. I developed the fingerprint door lock system utilizing Arduino, a fingerprint sensor, and a servo motor for unlocking mechanisms. The project provided hands-on 
+									experience with embedded systems, sensor integration, and security applications. I gained valuable insights into biometric authentication, hardware interfacing, 
+									and coding for real-time systems, which enhanced my problem-solving skills in hardware-software integration.</p>
+								<h3>Role</h3>
+								<ul>
+									<li>Designed and implemented the hardware architecture for the fingerprint door lock system using an arduino uno and a servo motor.</li>
+									<li>Integrated a fingerprint sensor for biometric authentication to ensure secure access.</li>
+									<li>Programmed the servo motor for unlocking mechanisms based on successful fingerprint recognition.</li>
+									<li>Developed software algorithms for fingerprint enrollment, matching, and access control.</li>
+									<li>Developed a robust data storage system using Arduino’s EEPROM to securely store and retrieve fingerprint templates and user IDs, enabling reliable verification of user access.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p>I encountered issues where the servo motor malfunctioned under varying voltage levels.</p>
+								<h3>Solution</h3>
+								<p>I Introduced a power regulation circuit to ensure consistent voltage supply to the servo motor, reducing voltage fluctuation.</p>
+								<h3>Tools and Softwares Used</h3>
+								<p>Arduino Uno, C, Servo Motor, and Fingerprint Sensor </p>
+							</article>
+
+							<article id="covidscan" class="inner">
+								<h2 class="major">COVID-19 Automated Scanner</h2>
+								<h3 class="role"> Role: Database Desginer</h3>
+								<h3> Project type: School</h3>
+								<h3> Duration: January 2022 to March 2022</h3>
+								<h3>Description</h3>
+								<p>The project involved collaborating with a team to design an automated COVID-19 scanner device that efficiently collects and stores health data. 
+									My primary role was to design and implement a database architecture using MySQL on a Raspberry Pi, ensuring secure and reliable data management. 
+									This experience deepened my understanding of database design, data integrity, and how to optimize queries for performance in resource-constrained environments.</p>
+								<h3>Role</h3>
+								<ul>
+									<li>Designed and implemented a MySQL database on a Raspberry Pi to store data collected from the COVID-19 scanner.</li>
+									<li>Developed database ideas that ensured efficient data retrieval and integrity from the scanner.</li>
+									<li>Created SQL queries for data insertion, updating, and retrieval to facilitate seamless communication between the scanner and the database.</li>
+									<li>Collaborated with team members to integrate the database with the scanner device, ensuring real-time data storage and access.</li>
+									<li>Conducted testing and debugging of the database system to optimize performance and ensure reliability.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p>I encountered issues with ensuring data integrity and preventing data loss during transmission from the scanner to the database.</p>
+								<h3>Solution</h3>
+								<p>I implemented transactional queries in MySQL to ensure that data was only committed to the database if all components of the transaction were successful, 
+									providing a safety against partial updates.</p>
+								<h3>Tools and Softwares Used</h3>
+								<p>MySQL, Python, and Raspberry Pi</p>
+							</article>
+
+							<article id="snakeladder" class="inner">
+								<h2 class="major">Advanced Snake and Ladder Game</h2>
+								<h3 class="role"> Role: Software Engineer</h3>
+								<h3> Project type: Personal</h3>
+								<h3> Duration: July 2024</h3>
+								<h3>Description</h3>
+								<p>Developed an advanced Snake and Ladder game using C programming, incorporating both traditional gameplay mechanics and enhanced features for an engaging user 
+									experience. The project allowed players to input their names at the beginning and displayed detailed game statistics upon completion. Through this project, 
+									I deepened my understanding of data structures, user input handling, and game logic implementation.</p>
+								<h3>Role</h3>
+								<ul>
+									<li>Designed and implemented the game's logic and rules using C programming.</li>
+									<li>Created a system for tracking and displaying game statistics for each player at the end of each game session.</li>
+									<li>Tested the game for bugs and optimized the code for smooth performance.</li>
+									<li>Developed user input functionality to allow players to enter their names at the start of the game.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p>I had to ensure user inputs were correctly validated and processed.</p>
+								<h3>Solution</h3>
+								<p>I developed input validation routines to check for valid player names and ensured smooth gameplay by handling errors gracefully.</p>
+								<h3>Tools and Softwares Used</h3>
+								<p>C.</p>
+								<h3>Demo</h3>
+								<video class="center-vid" controls>
+									<source src="videos/SnakeLadder.mp4" type="video/mp4">
+								  Your browser does not support the video tag.
+								</video>
+							</article>
+
+							<article id="ai" class="inner">
+								<h2 class="major">Emotion Image Classification</h2>
+								<h3 class="role"> Role: Machine Learning Engineer</h3>
+								<h3> Project type: School</h3>
+								<h3> Duration: April 2024</h3>
+								<h3>Description</h3>
+								<p>Developed an AI facial emotion classification system utilizing a dataset from Kaggle to classify emotions such as happiness, neutral, sadness, 
+									anger, surprise, disgust, and fear. The project employed two primary methodologies: leveraging transfer learning with a pre-trained model (ResNet50) 
+									and building a custom convolutional neural network (CNN) from scratch. Through iterative tuning and optimization of the model architecture and hyperparameters, 
+									I achieved an accuracy rate of 89%. This project deepened my understanding of machine learning techniques, model evaluation, and practical applications of computer vision.
+								</p>
+								<h3>Role</h3>
+								<ul>
+									<li>Researched and selected appropriate datasets from Kaggle for training the emotion classification model.</li>
+									<li>Implemented transfer learning using ResNet50 to leverage existing knowledge for improved performance.</li>
+									<li>Developed a custom CNN architecture from scratch tailored to the specific needs of emotion classification.</li>
+									<li>Preprocessed and augmented the dataset to enhance model robustness and prevent overfitting.</li>
+									<li>Tuned model hyperparameters and architecture iteratively to optimize accuracy and performance.</li>
+									<li>Evaluated model performance using various metrics (accuracy, precision, recall) and conducted error analysis to refine the approach.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p>I  encountered an issue where the custom CNN was overfitting on the training data, resulting in poor performance on the validation set.</p>
+								<h3>Solution</h3>
+								<p>I introduced dropout layers and L2 regularization in the architecture to reduce overfitting, alongside early stopping during training to monitor validation loss.</p>
+								<h3>Tools and Softwares Used</h3>
+								<p>Google Collab and Python</p>
+							</article>
+							
+							<article id="robotarm" class="inner">
+								<h2 class="major">Robot-aided bullet retrieval</h2>
+								<h3 class="role"> Role: Robotics Programmer</h3>
+								<h3> Project type: School</h3>
+								<h3> Duration: March 2024 to April 2024</h3>
+								<h3>Description</h3>
+								<p>Programmed a Meca 500 robot arm to execute a specialized teleoperation task aimed at assisting in bullet removal. 
+									The system utilized an electromagnet at the end effector which is activated upon reaching the bullet. The arm was programmed to precisely maneuver to a defined 
+									incision point. Once the robot arm reached this point, the speed was significantly reduced, and the arm transitioned 
+									from 3 degrees of freedom (DOF) to 6 DOF for enhanced control and accuracy. This project provided valuable insights into 
+									robotic programming, precision control, and the importance of safety in medical applications.</p>
+								<h3>Role</h3>
+								<ul>
+									<li>Developed and implemented the control algorithms for the Meca 500 robot arm to perform teleoperated task with the aid of a haptic device.</li>
+									<li>Programmed the transition of the robot arm from 3 DOF to 6 DOF upon reaching the defined incision point to enhance operational precision.</li>
+									<li>Integrated an electromagnet into the robotic arm's end effector for effective bullet retrieval.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p>I encounted issues with maintaining precision during the bullet removal operation as it is critical due to the sensitivity of the procedure.</p>
+								<h3>Solution</h3>
+								<p>I established a reduced workspace for the robot arm in relation to the haptic device's workspace upon reaching the incision point. This adjustment 
+									ensured high precision in the arm's movements by implementing a speed reduction protocol, effectively minimizing the risk of error.</p>
+								<h3>Tools and Softwares Used</h3>
+								<p>Meca500 Robot arm, Haply Inverse3 Haptic device, electromagnet, and Matlab.</p>
+								<h3>Demo</h3>
+								<video class="center-vid" controls>
+									<source src="videos/RobotArm Demo.mp4" type="video/mp4">
+								  Your browser does not support the video tag.
+								</video>
+							</article>
+							<article id="resume" class="inner">
+								<h2 class="major">Digital Portfolio Webpage</h2>
+								<h3 class="role"> Role: Web Designer</h3>
+								<h3> Project type: Personal</h3>
+								<h3> Duration: October 2024</h3>
+								<h3>Description</h3>
+								<p>Designed and developed a personal resume website to showcase work experience, projects, education, and an “About Me” section, implementing a 
+									clean, interactive, and responsive user interface. Through this project, I enhanced my skills in web development using HTML, JavaScript, 
+									jQuery, and CSS, learning about effective web layout, animations, and styling to create an engaging user experience.</p>
+								<h3>Role</h3>
+								<ul>
+									<li>Developed structured layouts for sections such as Work Experience, Projects, Education, and About Me using HTML and CSS.</li>
+									<li>Created interactive elements with JavaScript and jQuery, enhancing user engagement through animations and smooth navigation.</li>
+									<li>Ensured responsive design for compatibility with mobile and desktop devices.</li>
+									<li>Integrated smooth scrolling and navigation features for a polished user interface.</li>
+									<li>Designed the overall UI to highlight key information effectively, focusing on ease of reading and visual appeal.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p>The webpage needed to be accessible and visually appealing across all devices.</p>
+								<h3>Solution</h3>
+								<p>Implemented responsive design using CSS media queries to ensure consistent layout and functionality on different screen sizes.</p>
+								<h3>Tools and Softwares Used</h3>
+								<p>HTML, CSS, JavaScript, and JQuery.</p>
+								<h3>Demo</h3>
+								<p>You are using it right now :)</p>
+							</article>
+							
+
+						<!-- About Me -->
 							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+								<h2 class="major">About Me</h2>
+								<span class="image profile"><img src="images/Peter.JPG" alt="Peter's Picuture" /></span>
+								<p>In this section you get to find out a little bit about myself!. Please click on the options below to find out more :-)</p>
+								<details>
+									<summary>Name Pronounciation</summary>
+									<p>My name is pronounced: Peter (<b>pee-tr</b>) Egbikuadje (<b>eh-bic-wai-jeh</b>).</p>
+								</details>
+								<details>
+									<summary>Career Inspiration</summary>
+									<p>From a young age, my curiosity about technology led me to dismantle and reassemble toys and phones, sparking my passion for Engineering. In university, I faced the 
+										challenge of choosing a specific discipline among many that excited me. Ultimately, I chose Electrical Engineering for its seamless integration of software and hardware, 
+										which opened diverse career opportunities. This ultimately guided my focus toward digital design, specifically FPGA development, due to its unique blend of software and hardware elements.
+									</p>
+								</details>
+								<details>
+									<summary>Education</summary>
+									<p>I hold a Bachelor's degree in Engineering from Carleton University, where I developed a strong foundation in technology and innovation. I'm always eager to grow, and I’m considering 
+										pursuing further education to expand my expertise. Feel free to explore more about my educational background <a id="reference" href="#education">here</a>.
+									</p>
+								</details>
+								<details>
+									<summary>Personal Interests</summary>
+									<p>My personal interests include chess, cycling, mystery novels, programming, and watching sports. If my portfolio hasn't made it clear, I thrive on taking on new challenges!</p>
+								</details>
+								<details>
+									<summary>My Goals</summary>
+									<ul>
+										<li><b><em>Master FPGA Design:</em></b> Elevate my design and development skills to new heights, pushing the boundaries of what's possible through continuous learning.</li>
+										<li><b><em>Create Impactful Solutions:</em></b> Contribute to groundbreaking products that change lives and make a real difference in the world.</li>
+										<li><b><em>Deepen Industry Expertise:</em></b> Immerse myself in industry standards and practices to become a trusted expert in FPGA development.</li>
+										<li><b><em>Champion Sustainability:</em></b> Engage in projects that prioritize environmental responsibility and minimize impact on our planet.</li>
+										<li><b><em>Advance My Career:</em></b> Continuously evolve and seize opportunities that move my career forward, embracing growth every step of the way.</li>
+									</ul>
+								</details>
+								<details>
+									<summary>Desired Company Values</summary>
+									<ul>
+										<li><b><em>Mentorship and/or Support:</em></b> I seek opportunities to learn from experienced engineers, with guidance to enhance my design skills and understand industry best practices.</li>
+										<li><b><em>Challenging Projects:</em></b> I am eager to work on innovative and complex projects that push the boundaries of FPGA design and allow me to solve unique, meaningful problems.</li>
+										<li><b><em>Work-Life Balance:</em></b> I appreciate a company that values a healthy balance between work and personal life, ensuring productivity and preventing burnout.</li>
+										<li><b><em>Collaborative Environment:</em></b> I value a company culture that fosters teamwork, open communication, and cross-disciplinary collaboration, as these are essential for my growth and productivity.</li>
+										<li><b><em>Ethical Engineering Practices:</em></b> I am committed to working for a company that upholds the ethical standards set by the engineering governing bodies, 
+											prioritizing public safety and well-being in all designs and implementations.</li>
+										<!--<li><b><em>Career Growth Opportunities:</em></b> I value a clear path for advancement, both in technical and leadership roles, with ongoing support for continuous learning and personal development.</li>-->
+									</ul>
+								</details>
+								<details>
+									<summary>Values I Bring</summary>
+									<ul>
+										<li><b><em>Strong Technical Proficiency:</em> </b> I possess the technical skills and experience required for the positions I apply to. Whether it's hardware design, software development, 
+											or working with cutting-edge technologies like FPGAs, my background aligns with the expertise you're seeking.</li>
+										<li><b><em>Quick Learner, Fearless Problem Solver:</em></b> I’m not afraid to take on new challenges, as demonstrated by the variety of projects I’ve undertaken. From FPGA-based 
+											neural networks to AI systems and complex web applications, I quickly adapt to new technologies and approaches, picking up skills and techniques rapidly.</li>
+										<li><b><em>Driven to Learn and Grow:</em></b> I’m continuously motivated by the desire to learn and improve. I actively pursue new skills and stay up-to-date with 
+											the latest developments in the industry to ensure I’m always delivering high-quality, innovative solutions.</li>
+										<li><b><em>Collaborative Team Player:</em></b> I work well in diverse teams, drawing from my experiences across different fields and project types. Whether working alongside 
+											hardware engineers, software developers, or multidisciplinary teams, I’m skilled at collaborating to achieve shared goals and leveraging everyone's strengths.</li>
+										<li><b><em>Striving for Perfection:</em></b> For every project or task I take on, I’m deeply committed to excellence. I focus on the details to ensure the final result is 
+											of the highest possible quality, balancing innovation with precision to deliver outstanding work.</li>
+									</ul>
+								</details>
+								<details>
+									<summary>Programming/Scripting Languages</summary>
+									<p>Python, C, Java, TCL, Bash, Verilog, VHDL, Matlab, Git commands, JavaScript, PHP, HTML, CSS, and Groovy.</p>
+								</details>
+								<details>
+									<summary>Softwares/Tools</summary>
+									<p>Modelsim, Xilinx Vivado, Git version control, Bitbucket, Jira, Confluence, Linux based environment, MySQL, Google Collab, and Jenkins. </p>
+								</details>
+								<details>
+									<summary>Fun Fact</summary>
+									<p>I have a relentless obsession with cats, even though I don't own one. I’m convinced they secretly rule the world! Seriously, how do they just lounge around all day and still have everyone 
+										wanting to cuddle them while talking to them in a baby voice? It’s like they’ve got some kind of fluffy mind control! Simply ap-paw-ling!</p>
+								</details>
 							</article>
 
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								<form id="contact-form" method="post" action="contact.php">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" id="name" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="text" name="email" id="email" required/>
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<textarea name="message" id="message" rows="4" required></textarea>
 										</div>
 									</div>
 									<ul class="actions">
@@ -89,9 +669,7 @@
 									</ul>
 								</form>
 								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.linkedin.com/in/peteregbikuadje" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</article>
@@ -342,13 +920,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Peter Egbikuadje</p>
 					</footer>
 
 			</div>
 
 		<!-- BG -->
 			<div id="bg"></div>
+			<div id="tooltip"></div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -356,6 +935,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/hover.js"></script>
+			<script src="assets/js/formVal.js"></script>
+			<script src="assets/js/fpgamode.js"></script>
+
 
 	</body>
 </html>

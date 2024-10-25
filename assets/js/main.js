@@ -6,6 +6,7 @@
 
 (function($) {
 
+
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
@@ -13,6 +14,7 @@
 		$footer = $('#footer'),
 		$main = $('#main'),
 		$main_articles = $main.children('article');
+
 
 	// Breakpoints.
 		breakpoints({
@@ -67,7 +69,8 @@
 
 	// Main.
 		var	delay = 325,
-			locked = false;
+			locked = false,
+			parentArticle = null;
 
 		// Methods.
 			$main._show = function(id, initial) {
@@ -120,10 +123,11 @@
 
 				// Article already visible? Just swap articles.
 					if ($body.hasClass('is-article-visible')) {
-
 						// Deactivate current article.
 							var $currentArticle = $main_articles.filter('.active');
-
+							if ($currentArticle.length && $article.hasClass('inner')) {
+								parentArticle = $currentArticle;
+							}
 							$currentArticle.removeClass('active');
 
 						// Show article.
@@ -158,7 +162,6 @@
 
 				// Otherwise, handle as normal.
 					else {
-
 						// Mark as visible.
 							$body
 								.addClass('is-article-visible');
@@ -197,8 +200,45 @@
 
 			};
 
-			$main._hide = function(addState) {
+			// Method to close the inner article and return to the parent article.
+			$main._closeInnerArticle = function() {
+				if (!parentArticle)
+					return;
 
+				// Deactivate current inner article.
+				var $currentArticle = $main_articles.filter('.active');
+
+				$currentArticle.removeClass('active');
+
+				// Show parent (outer) article.
+				setTimeout(function() {
+
+					// Hide current article.
+					$currentArticle.hide();
+
+					// Show parent article.
+					parentArticle.show();
+
+					// Activate parent article.
+					setTimeout(function() {
+
+						parentArticle.addClass('active');
+
+							$window
+								.scrollTop(0)
+								.triggerHandler('resize.flexbox-fix');
+
+						// Unlock.
+						setTimeout(function() {
+							locked = false;
+						}, delay);
+
+					}, 25);
+
+				}, delay);
+			};
+
+			$main._hide = function(addState) {
 				var $article = $main_articles.filter('.active');
 
 				// Article not visible? Bail.
@@ -248,7 +288,7 @@
 						}
 
 					// Lock.
-						locked = true;
+					locked = true;
 
 				// Deactivate article.
 					$article.removeClass('active');
@@ -286,6 +326,14 @@
 
 			};
 
+			$('#reference').on('click', function(event) {
+				var hrefValue = $(this).attr('href'); // Get the href attribute
+				var $article = $(hrefValue); // Find the associated article using the href value
+				$article.addClass("inner"); // Add the "inner" class to the article
+				$article.addClass("temp");
+			});
+
+
 		// Articles.
 			$main_articles.each(function() {
 
@@ -294,8 +342,22 @@
 				// Close.
 					$('<div class="close">Close</div>')
 						.appendTo($this)
-						.on('click', function() {
-							location.hash = '';
+						.on('click', function(event) {
+							event.stopPropagation(); // Prevent the close button click from bubbling up to the body
+							if ($this.hasClass('inner')) {
+								// Close only the inner article
+								$main._closeInnerArticle();
+								let id = parentArticle.attr('id');
+								location.hash = id;
+								if ($this.hasClass('temp')) {
+									$this.removeClass("temp");
+									$this.removeClass("inner");
+								}
+								
+							} else {
+								// Close the parent (outer) article
+								location.hash = ''; // This should trigger the main._hide method and close everything
+							}
 						});
 
 				// Prevent clicks from inside article from bubbling.
@@ -397,5 +459,5 @@
 					$window.on('load', function() {
 						$main._show(location.hash.substr(1), true);
 					});
-
+	
 })(jQuery);
