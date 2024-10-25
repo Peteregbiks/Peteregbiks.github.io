@@ -126,7 +126,8 @@
 						// Deactivate current article.
 							var $currentArticle = $main_articles.filter('.active');
 							if ($currentArticle.length && $article.hasClass('inner')) {
-								parentArticle = $currentArticle;
+								var articleId = $currentArticle.attr('id'); // Get the ID of the active article
+    							sessionStorage.setItem('savedArticle', JSON.stringify({ id: articleId }));
 							}
 							$currentArticle.removeClass('active');
 
@@ -326,11 +327,17 @@
 
 			};
 
+			var refState = null;
+
 			$('#reference').on('click', function(event) {
 				var hrefValue = $(this).attr('href'); // Get the href attribute
 				var $article = $(hrefValue); // Find the associated article using the href value
 				$article.addClass("inner"); // Add the "inner" class to the article
 				$article.addClass("temp");
+				refState = true;
+				sessionStorage.setItem('refState', refState.toString());
+				var articleId = $article.attr('id'); // Get the ID of the active article
+    			sessionStorage.setItem('article', JSON.stringify({ id: articleId }));
 			});
 
 
@@ -345,13 +352,19 @@
 						.on('click', function(event) {
 							event.stopPropagation(); // Prevent the close button click from bubbling up to the body
 							if ($this.hasClass('inner')) {
-								// Close only the inner article
+								var savedArticle = sessionStorage.getItem('savedArticle');
+								if (savedArticle) {
+									var articleData = JSON.parse(savedArticle);
+									parentArticle = $main_articles.filter('#' + articleData.id);
+								}
+
 								$main._closeInnerArticle();
 								let id = parentArticle.attr('id');
 								location.hash = id;
 								if ($this.hasClass('temp')) {
 									$this.removeClass("temp");
 									$this.removeClass("inner");
+									refState = false;
 								}
 								
 							} else {
@@ -366,6 +379,8 @@
 					});
 
 			});
+
+
 
 		// Events.
 			$body.on('click', function(event) {
@@ -459,5 +474,21 @@
 					$window.on('load', function() {
 						$main._show(location.hash.substr(1), true);
 					});
+		
+		$(document).ready(function() {
+			const refStat = sessionStorage.getItem('refState');
+			var $refArticle = null;
+    		var isRef = (refStat === 'true');
+			var savedRef = sessionStorage.getItem('article');
+				if (savedRef) {
+					var articleData = JSON.parse(savedRef);
+					$refArticle = $main_articles.filter('#' + articleData.id);
+				}
+			if (isRef) {
+				$refArticle.addClass("inner"); // Add the "inner" class to the article
+				$refArticle.addClass("temp");
+			}
+		});
+			
 	
 })(jQuery);
