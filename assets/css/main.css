@@ -905,7 +905,16 @@ input, select, textarea {
 				unicode-bidi: isolate;
 			}
 
+			summary::-webkit-details-marker {
+				display: none; /* Hides the arrow in Webkit browsers (Chrome, Safari) */
+			}
+			
+			summary::marker {
+				content: ''; /* Hides the arrow in Firefox and other browsers */
+			}
+			
 			summary:before {
+				float: right;
 				content: "+";
 				margin-right: 10px;
 				font-weight: bold;
