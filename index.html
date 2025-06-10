@@ -16,13 +16,13 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon fa-cat"></span>
+							<span class="icon fa-microchip"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
 								<h1>Peter Egbikuadje</h1>
 								<p>As a dedicated and ambitious aspiring electrical engineer, I am eager to thrive and contribute in a collaborative, dynamic work environment 
-									that values creativity, teamwork, and innovation. With a strong foundation in digital design—particularly in FPGA development—I am 
+									that values creativity, teamwork, and innovation. With a strong foundation in digital design, I am 
 									equally excited to apply my skills in software development and other technical roles. I am committed to growing across diverse 
 									disciplines and look forward to contributing wherever my expertise and adaptability can drive meaningful impact.
 								</p>
@@ -33,7 +33,7 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="docs/Peter_Egbikuadje_Resume_Digital_Design_Demo.pdf" target="_blank">My Resume</a></li>
+								<li><a href="docs/Peter Egbiks Resume (June 2025).pdf" target="_blank">My Resume</a></li>
 								<li><a href="#education">Education</a></li>
 								<li><a href="#work">Work</a></li>
 								<li><a href="#project">Projects</a></li>
@@ -217,6 +217,17 @@
 								<p>Here are some of the projects I've worked on. Hover over each project to get a glance at my role, and click for more details.</p>
 								<nav class="nav-item">
 									<ul>
+										<li><a href="#axi4lite">AXI4-Lite Slave</a></li>
+									</ul>
+								</nav>
+								<nav class="nav-item">
+									<ul>
+										<li><a href="#asyncfifo">Asynchronous FIFO</a></li>
+										<li><a href="#ponggame">Pong Game</a></li>
+									</ul>
+								</nav>
+								<nav class="nav-item">
+									<ul>
 										<li><a href="#pacman">Pacman Game</a></li>
 										<li><a href="#bouncedvd">Bouncing DVD Replica</a></li>
 									</ul>
@@ -233,9 +244,10 @@
 										<li><a href="#syscx">X Social Media Replica</a></li>
 									</ul>
 								</nav>
-								<nav class="nav-item notfpga">
+								<nav class="nav-item">
 									<ul>
 										<li><a href="#doorlock">Fingerprint Doorlock</a></li>
+										<li><a href="#bankmanager">Bank Manager System</a></li>
 									</ul>
 								</nav>
 								<nav class="nav-item notfpga">
@@ -261,6 +273,85 @@
 							</article>
 
 							<!-- Project List --> 
+							<article id="axi4lite" class="inner">
+								<h2 class="minor">AXI4-Lite Slave (Register Block) Design and Verification</h2>
+								<h3 class="role"> Role: Digital Designer and Verifier</h3>
+								<h3> Project type: Personal</h3>
+								<h3> Duration: May 2025 to June 2025</h3>
+								<h3>Description</h3>
+								<p>I designed and verified an AXI4-Lite Slave (Register Block) interface, a key component in SoC design used for processor-controlled register access. 
+									The project involved developing both the DUT and a comprehensive UVM testbench to ensure protocol compliance, correct functionality, and robust 
+									register handling. This work strengthened my understanding of the AXI4-Lite protocol, register map implementation, and functional verification practices.</p>
+								<h3>Responsibilities</h3>
+								<ul>
+									<li>Designed the AXI4-Lite Slave DUT in SystemVerilog, including address decoding, register interface logic, and response signaling.</li>
+									<li>Built a complete UVM testbench from scratch with driver, sequencer, monitor, agent, and scoreboard components.</li>
+									<li>Wrote constrained-random and directed sequences to perform read/write operations across various register addresses including illegal addresses.</li>
+									<li>Created assertions and functional coverage points to validate protocol compliance and test completeness.</li>
+									<li>Integrated a UVM scoreboard to compare expected vs actual register values.</li>
+									<li>Performed simulations and waveform debugging using Cadence Xcelium to validate DUT behavior under multiple traffic patterns.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p>Creating an accurate and reusable AXI-compliant monitor and driver that handled all edge cases and timing conditions.</p>
+								<h3>Solution</h3>
+								<p>I referred closely to the AMBA AXI4-Lite specification, implemented detailed FSMs in the driver and monitor, and iteratively validated functionality through 
+									simulation and coverage analysis.</p>
+								<h3>Tools and Softwares Used</h3>
+								<p>SystemVerilog, UVM, Cadence Xcelium, and AMBA AXI4-Lite Specification.</p>
+							</article>
+
+							<article id="asyncfifo" class="inner">
+								<h2 class="minor">Asynchronous FIFO Design and Verification</h2>
+								<h3 class="role"> Role: Digital Designer and Verifier</h3>
+								<h3> Project type: Personal</h3>
+								<h3> Duration: May 2025</h3>
+								<h3>Description</h3>
+								<p>I designed and verified an asynchronous FIFO module to facilitate safe data transfer between two independent clock domains. The design was built 
+									to address metastability, synchronization, and data integrity challenges using Gray code pointers, dual-clock operation, and proper clock domain 
+									crossing techniques. This project significantly strengthened my understanding of CDC design principles, Gray code synchronization, and FIFO architectures.</p>
+								<h3>Responsibilities</h3>
+								<ul>
+									<li>Designed the asynchronous FIFO DUT in Verilog with configurable data width and depth parameters.</li>
+									<li>Implemented independent read and write logic operating on separate clock domains.</li>
+									<li>Utilized Gray code counters and synchronizer chains to ensure reliable pointer communication across clock boundaries.</li>
+									<li>Developed a complete UVM verification environment from scratch, including testbench architecture, agent, sequencer, driver, monitor, scoreboard, sequences, and environment.</li>
+									<li>Wrote directed and constrained-random test sequences to validate corner cases including overflow and underflow.</li>
+									<li>Integrated assertions and functional coverage to ensure design correctness and coverage completeness.</li>
+									<li>Simulated and debugged using Cadence Xcelium; achieved 100% functional and code coverage.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p>Ensuring safe and stable synchronization of read and write pointers across unsynchronized clock domains without introducing metastability issues.</p>
+								<h3>Solution</h3>
+								<p>Implemented multi-stage synchronizers and Gray-coded pointers, thoroughly testing them under diverse clock conditions and edge cases in simulation.</p>
+								<h3>Tools and Softwares Used</h3>
+								<p>SystemVerilog, UVM, and Cadence Xcelium.</p>
+							</article>
+
+							<article id="ponggame" class="inner">
+								<h2 class="minor">Pong Game</h2>
+								<h3 class="role"> Role: FPGA Designer</h3>
+								<h3> Project type: Personal</h3>
+								<h3> Duration: September 2024 to December 2024</h3>
+								<h3>Description</h3>
+								<p>I developed an FPGA-based implementation of the classic Pong game using Verilog and Xilinx Vivado, showcasing real-time interactivity through 
+									paddle and ball movement rendered over a VGA interface. This project allowed me to explore low-level graphical rendering, finite state machine 
+									design, and hardware-software synchronization for real-time gaming on an FPGA platform.</p>
+								<h3>Responsibilities</h3>
+								<ul>
+									<li>Designed the full game logic and implemented it in Verilog, including ball movement, paddle control, collision detection, scoring, and game reset functionality.</li>
+									<li>Built a VGA controller to generate 640×480 resolution video signals, including timing logic and sync pulse generation for accurate monitor display.</li>
+									<li>Created and managed FSMs to handle game state transitions and input control via physical push buttons on the Nexys4 DDR board.</li>
+									<li>Used Xilinx Vivado constraint files to map video outputs and user inputs to the FPGA's physical I/O pins.</li>
+									<li>Developed functional testbenches to verify FSM behavior, timing synchronization, and VGA signal stability during gameplay.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p>Maintaining smooth animation while synchronizing real-time game logic with the VGA frame rate.</p>
+								<h3>Solution</h3>
+								<p>Used a divided pixel clock and carefully timed FSM updates to ensure all movements and rendering aligned with the VGA refresh cycle, minimizing visual artifacts and input lag.</p>
+								<h3>Tools and Softwares Used</h3>
+								<p>Xilinx Vivado, Verilog, Nexys4 DDR FPGA Board, and a VGA Monitor.</p>
+							</article>
+
 
 							<article id="pacman" class="inner">
 								<h2 class="minor">Pacman Spiking Neural Network</h2>
@@ -322,6 +413,31 @@
 									<source src="videos/BounceDVD.mp4" type="video/mp4">
 								  Your browser does not support the video tag.
 								</video>
+							</article>
+
+							<article id="bankmanager" class="inner">
+								<h2 class="minor">Bank Management System (C Console Application)</h2>
+								<h3 class="role"> Role: Software Engineer</h3>
+								<h3> Project type: Personal</h3>
+								<h3> Duration: March 2022 to May 2022</h3>
+								<h3>Description</h3>
+								<p>I developed a menu-driven console-based Bank Management System in C, simulating core banking operations such as registration, 
+									login with passcode authentication, deposits, withdrawals, fund transfers, and account information updates. This project 
+									helped solidify my skills in structured programming, user input handling, and persistent data storage using file I/O.</p>
+								<h3>Responsibilities</h3>
+								<ul>
+									<li>Designed and implemented user registration and authentication functionality using secure passcode-based login.</li>
+									<li>Developed core banking features, including deposit, withdrawal, balance inquiry, fund transfer, and account management.</li>
+									<li>Utilized C structures (struct) to define and manage customer account information in an organized and scalable format.</li>
+									<li>Implemented persistent data storage using file I/O, allowing real-time read/write access to user data and ensuring data retention across sessions.</li>
+									<li>Created a simple, user-friendly console interface for seamless navigation through all banking operations.</li>
+								</ul>
+								<h3>Key Challenge</h3>
+								<p>Ensuring data consistency and integrity during concurrent account updates and multiple transaction operations.</p>
+								<h3>Solution</h3>
+								<p>Implemented structured file handling logic to update records safely, minimize data corruption risks, and maintain reliable access to user information across program executions.</p>
+								<h3>Tools and Softwares Used</h3>
+								<p>C, GCC Compiler, Console, and VS Code.</p>
 							</article>
 
 							<article id="eggtimer" class="inner">
@@ -655,12 +771,22 @@
 									</ul>
 								</details>
 								<details>
-									<summary>Programming/Scripting Languages</summary>
-									<p>Python, C, Java, TCL, Bash, Verilog, VHDL, Matlab, Git commands, JavaScript, PHP, HTML, JQuery, CSS, and Groovy.</p>
+									<summary>Technical Skills</summary>
+									<ul>
+										<li><b>Programming/Hardware Languages (Advanced):</b> Python, C, TCL, Bash, Verilog, and SystemVerilog.</li>
+										<li><b>Programming/Hardware Languages (Intermediate):</b> Java, VHDL, Matlab, JavaScript, PHP, HTML, JQuery, CSS, and Groovy</li>
+										<li><b>Verification Methodologies:</b> Universal Verification Methodology (UVM) and Assertion Based Verification (ABV)</li>
+										<li><b>EDA Tools:</b> Modelsim, Questasim, Vivado, Virtuoso, and Xcelium</li>
+										<li><b>Collabration Tools:</b> Git, Jira, Bitbucket, and Confluence</li>
+										<li><b>Protocols & Standards:</b> Ethernet (1G/10G/25G/100G), I2C, SPI, UART, PCIe, SDI, and AXI4(-Lite)</li>
+									</ul>
 								</details>
 								<details>
-									<summary>Softwares/Tools</summary>
-									<p>Modelsim, Xilinx Vivado, Git version control, Bitbucket, Jira, Confluence, Linux based environment, MySQL, Google Collab, and Jenkins. </p>
+									<summary>Certifications </summary>
+									<ul>
+										<li><a href="https://www.credly.com/badges/de70306c-327a-45d6-b99a-be60a82d4c39">SystemVerilog for Design and Verification</a> – Cadence Design Systems, May 2025</li>
+										<li><a href="https://www.credly.com/badges/b81724b4-1fdf-4fc4-b703-708ad2b71788">SystemVerilog Accelerated Verification with UVM</a> – Cadence Design Systems, May 2025</li>
+									</ul>
 								</details>
 								<details>
 									<summary>Fun Fact</summary>
