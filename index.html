@@ -304,30 +304,30 @@
 							</article>
 
 							<article id="asyncfifo" class="inner">
-								<h2 class="minor">Asynchronous FIFO Design and Verification</h2>
+								<h2 class="minor">Asynchronous FIFO Design and Co-Simulation Verification</h2>
 								<h3 class="role"> Role: Digital Designer and Verifier</h3>
 								<h3> Project type: Personal</h3>
 								<h3> Duration: May 2025</h3>
 								<h3>Description</h3>
-								<p>I designed and verified an asynchronous FIFO module to facilitate safe data transfer between two independent clock domains. The design was built 
-									to address metastability, synchronization, and data integrity challenges using Gray code pointers, dual-clock operation, and proper clock domain 
-									crossing techniques. This project significantly strengthened my understanding of CDC design principles, Gray code synchronization, and FIFO architectures.</p>
+								<p>Designed and verified a parameterized asynchronous FIFO to safely transfer data between independent clock domains. The project addressed metastability, synchronization, 
+									and data integrity challenges using Gray-coded pointers, dual-clock operation, and proper clock-domain crossing techniques. Integrated a cycle-accurate C++ golden model 
+									with the RTL via DPI-C for automated co-simulation verification, strengthening expertise in clock-domain crossing, OOP in hardware modeling, FIFO architectures, and advanced digital verification techniques.</p>
 								<h3>Responsibilities</h3>
 								<ul>
-									<li>Designed the asynchronous FIFO DUT in Verilog with configurable data width and depth parameters.</li>
-									<li>Implemented independent read and write logic operating on separate clock domains.</li>
-									<li>Utilized Gray code counters and synchronizer chains to ensure reliable pointer communication across clock boundaries.</li>
-									<li>Developed a complete UVM verification environment from scratch, including testbench architecture, agent, sequencer, driver, monitor, scoreboard, sequences, and environment.</li>
-									<li>Wrote directed and constrained-random test sequences to validate corner cases including overflow and underflow.</li>
-									<li>Integrated assertions and functional coverage to ensure design correctness and coverage completeness.</li>
-									<li>Simulated and debugged using Cadence Xcelium; achieved 100% functional and code coverage.</li>
+									<li>Developed the asynchronous FIFO DUT in SystemVerilog with configurable data width and depth.</li>
+									<li>Implemented independent read and write logic operating on separate clocks, using Gray-coded pointers and multi-stage synchronizers.</li>
+									<li>Built a C++ golden model of the FIFO using OOP principles (encapsulation, classes, methods), supporting write, read, and logging operations.</li>
+									<li>Integrated the C++ model with the RTL via DPI-C, enabling cycle-accurate co-simulation and automated output comparison.</li>
+									<li>Wrote a SystemVerilog testbench simulating asynchronous write/read clocks and automated logging for verification.</li>
+									<li>Validated corner cases including overflow and underflow, ensuring correct data ordering and pointer integrity.</li>
+									<li>Performed cycle-accurate co-simulation to detect discrepancies, with detailed logging for debugging.</li>
 								</ul>
 								<h3>Key Challenge</h3>
-								<p>Ensuring safe and stable synchronization of read and write pointers across unsynchronized clock domains without introducing metastability issues.</p>
+								<p>Ensuring reliable synchronization of read and write pointers across asynchronous clocks without introducing metastability or data corruption.</p>
 								<h3>Solution</h3>
-								<p>Implemented multi-stage synchronizers and Gray-coded pointers, thoroughly testing them under diverse clock conditions and edge cases in simulation.</p>
+								<p>Implemented multi-stage synchronizers and Gray-coded pointer logic, thoroughly tested under varying clock conditions, with real-time comparison against the C++ reference model.</p>
 								<h3>Tools and Softwares Used</h3>
-								<p>SystemVerilog, UVM, and Cadence Xcelium.</p>
+								<p>SystemVerilog, C++, DPI-C, Cadence Xcelium.</p>
 							</article>
 
 							<article id="ponggame" class="inner">
