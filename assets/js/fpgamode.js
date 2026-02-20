@@ -1,11 +1,11 @@
 document.getElementById('fpgamode').addEventListener('click', function(event) {
     var fpgamodeEle = document.getElementById('fpgamode');
     var currentMode = fpgamodeEle.textContent;
-    var extractedMode = currentMode.match(/Digital Design Mode:\s*([A-Za-z\s]+)/);
+    var extractedMode = currentMode.match(/Design & Verification Mode:\s*([A-Za-z\s]+)/);
     var modElems = document.getElementsByClassName('notfpga');
     var enable = null;
     if (extractedMode[1].trim() === "Disabled") {
-        fpgamodeEle.textContent = "Digital Design Mode: Enabled";
+        fpgamodeEle.textContent = "Design & Verification Mode: Enabled";
         Array.from(modElems).forEach(element => {
             if (!element.classList.contains('hidden')) {
                 element.classList.add('hidden');
@@ -14,7 +14,7 @@ document.getElementById('fpgamode').addEventListener('click', function(event) {
         enable = true;
     }
     else {
-        fpgamodeEle.textContent = "Digital Design Mode: Disabled";
+        fpgamodeEle.textContent = "Design & Verification Mode: Disabled";
         Array.from(modElems).forEach(element => {
             if (element.classList.contains('hidden')) {
                 element.classList.remove('hidden');

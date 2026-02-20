@@ -738,10 +738,14 @@ input, select, textarea {
 
 		.center-vid {
 			display: block;
+			margin: 2.5rem 0;
 			margin-left: auto;     /* Auto margin on the left */
     		margin-right: auto;
-			width: 70%;
+			text-align: center;
 		}
+			.center-vid img {
+				width: 50%;
+			}
 
 		@media screen and (max-width: 736px) {
 
